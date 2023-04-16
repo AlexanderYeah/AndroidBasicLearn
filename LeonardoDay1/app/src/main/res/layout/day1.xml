@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <Button-->
+<!--        android:id="@+id/btn"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:text="ClickMe"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:background="@drawable/btn_selector"-->
+<!--        android:backgroundTint="@color/btn_color_selector"-->
+<!--        android:onClick="leoClick"-->
+<!--        >-->
+<!--    </Button>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:hint="please type something"-->
+<!--        android:textColorHint="#ffeeaaee"-->
+<!--        android:inputType="numberPassword"-->
+<!--        android:drawableLeft="@drawable/baseline_account_circle_24"-->
+<!--        android:drawableRight="@drawable/baseline_access_alarm_24"-->
+<!--        android:drawablePadding="20dp"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:background="#ffffffff"-->
+<!--        />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/img_view"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:src="@drawable/baseline_account_circle_24"-->
+
+<!--            />-->
+<!--        <ProgressBar-->
+<!--            android:id="@+id/pb"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:max="80"-->
+<!--            />-->
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/pb_h"-->
+<!--            style="?android:progressBarStyleHorizontal"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:max="100"/>-->
+
+
+
+        <Button
+            android:id="@+id/send_noti"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="发送通知"
+            />
+
+        <Button
+            android:id="@+id/cancel_noti"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="发送通知"
+        />
+
+
+
+
+
+
+</LinearLayout>
+

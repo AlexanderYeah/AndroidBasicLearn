@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ddaaee"
+        android:gravity=""
+        app:navigationIcon="@drawable/baseline_access_alarm_24"
+        app:titleTextColor="@color/btn_color_selector"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="你好"
+            android:textSize="25sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <Button
+        android:id="@+id/btn_alert"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="显示一个对话框"
+        />
+
+
+</LinearLayout>
+
