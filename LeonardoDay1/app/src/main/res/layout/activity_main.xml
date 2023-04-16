@@ -9,6 +9,23 @@
 
 </LinearLayout>
 
+
+<!--RecyclerView 的使用-->
+
+<!--<LinearLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    >-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+
+
+<!--</LinearLayout>-->
+
 <!--ListView-->
 
 <!--<LinearLayout-->
