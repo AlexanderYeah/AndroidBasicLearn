@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class template extends AppCompatActivity {
 
-    private static final String TAG = "Leonardo";
+    private static final String TAG = "Fibonacci";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

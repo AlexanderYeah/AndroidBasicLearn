@@ -3,6 +3,7 @@
     package="com.example.leonardoday1">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,11 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LeonardoDay1">
         <activity
+            android:name=".ActFinishActivity"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.myselfActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </activity>
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTask"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
