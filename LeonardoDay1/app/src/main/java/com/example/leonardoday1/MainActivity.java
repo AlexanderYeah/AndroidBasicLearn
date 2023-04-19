@@ -1,15 +1,12 @@
 package com.example.leonardoday1;
 
-import android.content.ComponentName;
-import android.content.Intent;
-import android.net.Uri;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.net.URI;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -19,45 +16,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.jump_to_tel).setOnClickListener(this);
-        findViewById(R.id.jump_to_sms).setOnClickListener(this);
-        findViewById(R.id.jump_to_my_self).setOnClickListener(this);
+
+        findViewById(R.id.save_btn).setOnClickListener(this);
+
+        SharedPreferences shared = getSharedPreferences("user_info",MODE_PRIVATE);
+        // 直接读取数据
+        String username = shared.getString("username","");
+        Log.e(TAG, "onCreate: " + username);
+
 
     }
 
+
     @Override
     public void onClick(View view) {
+        if (view.getId() == R.id.save_btn){
+            // 保存信息到本地
+            EditText et1 = findViewById(R.id.username);
+            EditText et2 = findViewById(R.id.password);
+            // MODE_PRIVATE 默认模式，指定该SharedPreferences数据只能被本应用程序读、写。
+            SharedPreferences shared = getSharedPreferences("user_info", MODE_PRIVATE);
+            // 1 存储数据 借助Editor
+            SharedPreferences.Editor editor =  shared.edit();
+            editor.putString("username",et1.getText().toString());
+            editor.putString("password",et2.getText().toString());
+            // 提交数据
+            editor.commit();
 
-        switch (view.getId()){
-
-            case R.id.jump_to_tel:
-            {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_DIAL);
-                Uri uri = Uri.parse("tel:123456789");
-                intent.setData(uri);
-                startActivity(intent);
-            }
-                break;
-            case R.id.jump_to_sms:
-                Intent intent2 = new Intent();
-                intent2.setAction(Intent.ACTION_SENDTO);
-                // 123456789 为发送目标
-                Uri uri2 = Uri.parse("sms:123456789");
-                intent2.setData(uri2);
-                startActivity(intent2);
-                break;
-            // 跳转我自己的页面
-            case R.id.jump_to_my_self:
-                Intent intent3 = new Intent();
-                intent3.setAction("android.intent.action.myselfActivity");
-                intent3.addCategory(Intent.CATEGORY_DEFAULT);
-                startActivity(intent3);
-                break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + view.getId());
         }
-
-
     }
 }

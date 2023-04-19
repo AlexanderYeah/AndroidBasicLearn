@@ -11,21 +11,27 @@
     android:background="#ffffff"
     android:gravity="center">
 
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入用户名"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码"
+        />
+
     <Button
-        android:id="@+id/jump_to_tel"
+        android:id="@+id/save_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="跳转到打电话界面"/>
-    <Button
-        android:id="@+id/jump_to_sms"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="跳转到发短信界面"/>
-    <Button
-        android:id="@+id/jump_to_my_self"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="跳转我自己定义的界面"/>
+        android:text="保存用户名和密码到本地"/>
+
 
 </LinearLayout>
 
