@@ -12,22 +12,9 @@
     android:gravity="center">
 
 
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="请输入用户名"
-        />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="请输入密码"
-        />
 
     <Button
-        android:id="@+id/save_btn"
+        android:id="@+id/save_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="保存用户名和密码到本地"/>
